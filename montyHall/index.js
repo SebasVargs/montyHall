@@ -26,14 +26,14 @@ const randomIndex = setRandomColors();
 
 function setRandomImages() {
     const divs = document.querySelectorAll('#randomImages .card-back img');
-    const imagePaths = ['./src/yate.png', './src/yate.png'];
+    const imagePaths = ['./src/toro.png', './src/toro.png'];
 
     for (let i = 0; i < divs.length; i++) {
         const randomImagePath = imagePaths[Math.floor(Math.random() * imagePaths.length)];
         divs[i].src = randomImagePath;
 
         if (i === randomIndex) {
-            divs[i].src = './src/toro.png';
+            divs[i].src = './src/yate.png';
         }
     }
 
