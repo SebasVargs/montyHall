@@ -1,0 +1,94 @@
+* {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+h1{
+    margin-top: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.center-cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+}
+
+.card {
+    width: 200px;
+    height: 300px;
+    perspective: 1000px;
+    margin: 5vh;
+}
+
+.card-inner {
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+}
+
+.card:active .card-inner, .card.flip .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.card-front {
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-back {
+    color: #fff;
+    transform: rotateY(180deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-back img {
+    width: 100%;
+}
+
+.card-front img {
+    height: 100%;
+}
+
+/*
+    Seccion de los colores que cambian
+*/
+
+.blue1 {
+    background-color: blue;
+}
+
+.blue2 {
+    background-color: blue;
+}
+
+.red {
+    background-color: red;
+}
+
+#randomColor {
+    display: flex;
+}
+
+#randomColor div {
+    width: 2px;
+    height: 2px;
+    text-align: center;
+    line-height: 100px;
+    margin: 5px;
+    font-size: 24px;
+}
