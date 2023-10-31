@@ -22,12 +22,11 @@ function setRandomColors() {
 }
 
 // Llama a la función para establecer los colores aleatorios cuando la página se carga.
-setRandomColors();
+const randomIndex = setRandomColors();
 
 function setRandomImages() {
     const divs = document.querySelectorAll('#randomImages .card-back img');
     const imagePaths = ['./src/yate.png', './src/yate.png'];
-    const randomIndex = randomPosition(divs.length);
 
     for (let i = 0; i < divs.length; i++) {
         const randomImagePath = imagePaths[Math.floor(Math.random() * imagePaths.length)];
