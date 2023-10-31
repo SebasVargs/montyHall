@@ -42,3 +42,14 @@ function setRandomImages() {
 
 // Llama a la función para establecer los colores aleatorios cuando la página se carga.
 setRandomImages();
+
+let firstClick = true;
+
+function handleCardClick(card) {
+    if (firstClick) {
+        card.querySelector('.card-front').style.background = 'blue';
+        firstClick = false;
+    } else {
+        card.classList.toggle('flip');
+    }
+}
